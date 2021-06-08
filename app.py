@@ -43,12 +43,12 @@ def login_required(test):
 
 @app.route('/')
 def home():
-    return render_template('pages/index.html')
+    return render_template('pages/placeholder.home.html')
 
 
-@app.route('/ct')
+@app.route('/about')
 def about():
-    return render_template('pages/ct.html')
+    return render_template('pages/placeholder.about.html')
 
 
 @app.route('/login')
@@ -90,7 +90,6 @@ if not app.debug:
     file_handler.setLevel(logging.INFO)
     app.logger.addHandler(file_handler)
     app.logger.info('errors')
-
 #----------------------------------------------------------------------------#
 # Launch.
 #----------------------------------------------------------------------------#
